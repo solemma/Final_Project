@@ -1,0 +1,131 @@
+body{
+	font-family: "impact";
+	font-size: 25px;
+	font-style: italic;
+	color: brown;
+	background-color: grey;
+
+}
+
+h2{
+	text-align: center;
+	font-size: 75px;
+	color: brown; 
+}
+
+li{
+	text-decoration: none;
+}
+
+
+
+.open{
+	float: center;
+	font-size: 30px;
+/*	width: 650px;*/
+}
+.hp_column1{
+	float: left;
+	margin-right: 10px;
+	width: 200px;
+}
+
+.hp_column2{
+	float: left;
+	margin-right: 10px;
+	width: 200px;
+}
+
+.hp_column3{
+	float: left;
+	margin-right: 5px;
+	width: 200px;
+}
+
+.hp_nav{
+	position: fixed;
+	list-style: none;
+	font-family: impact;
+	font-style: normal;
+	line-height: 40px;
+	color: grey;
+	text-decoration: none;
+}
+
+.hp_nav a:hover{
+	font-weight: bold;
+	text-decoration: underline overline;
+}
+
+.pg3_nav{
+	/*position: fixed;*/
+	text-decoration: none;
+	list-style: none;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.pg3_nav a:hover{
+	font-weight: bold;
+	text-decoration: underline overline;
+	color: gold;
+}
+
+.text1{
+	float: right;
+	width: 550px;
+}
+
+#page2{
+	background: url('Guggenheim.jpg');
+}
+
+.Quote{
+	float: right;
+	width: 335px;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 35px;
+	font-family: impact;
+	color: black;
+	/*background-color: white;*/
+}
+
+.todo{
+	list-style: none;
+	font-family: impact;
+	color: black;
+	line-height: 60px;
+	text-decoration: none;
+	background-color: grey;
+}
+
+.todo a:hover{
+	font-weight: bold;
+	text-decoration: underline overline;
+	color: white;
+}
+
+.todo a:active{
+	color: green;
+}
+
+h2{
+	color: lightgrey;
+	font-size: 45px;
+	font-weight: bold;
+	text-decoration: underline;
+	font-family: impact;
+}
+
+.catimg{
+	float: left;
+	width: 450px;
+	border: solid grey 10px;
+	margin-right: 20px;
+}
+
+span{
+	font-size: 30px;
+	font-weight: bold;
+}

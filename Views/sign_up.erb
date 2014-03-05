@@ -1,0 +1,39 @@
+
+<DOCTYPE hmtl>
+<html>
+	<head>
+		<title>
+			Login Error
+		</title>
+		
+	
+	</head>
+
+		<body>
+			<h2> 
+				Don't Have an Account?
+			</h2>
+			<h2>
+				No problem!  Create your account below!
+			</h2>
+			<%=@newuser%>
+			</br>
+
+			<form method="POST" ACTION="/sign-up">
+				<label for="username">Username</lable>
+				<input type="text" name="[user]username">
+				<label for="password">Password</lable>
+				<input type="password" name="[user]password">	
+				<label for="email">Email</lable>
+				<input type="email" name="[user]email">
+				<label for="fname">First Name</label>
+				<input type="text" name="[user]fname">
+				<label for="lname">Last Name</label>
+				<input type="text" name="[user]lname">	
+				<label for="birthday">Birthday</label>	
+				<input type="date" name="[user]birthday">		
+				<input type="submit">
+			</form>
+		</body>
+
+</html>

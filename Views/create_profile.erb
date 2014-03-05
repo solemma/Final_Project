@@ -1,0 +1,29 @@
+
+<DOCTYPE hmtl>
+<html>
+	<head>
+		<title>
+			Create Profile Page
+		</title>
+		
+	
+	</head>
+
+		<body>
+			<h3> 
+				Tell us a little more about you
+			</h3>
+			</br>
+			<%=@newprofile%>
+			<form method="POST" ACTION="/create-profile">
+				<label for="interests">What are some of your interests?</lable>
+				<input type="text" name="[profile]interests">
+				<label for="city">What city do you live in?</lable>
+				<input type="city" name="[profile]city">	
+				<label for="school">Name of your Alma mater</lable>
+				<input type="school" name="[profile]school">
+				<input type="submit">
+			</form>
+		</body>
+
+</html>

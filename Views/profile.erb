@@ -9,38 +9,42 @@
 	</head>
 
 		<body>
-
 			<ul>
 				<li>
-					User Name
+					User Name:  <%=@user.username%>
 				</li>
 				<li>
-					First Name
+					First Name:  <%=@user.fname%>
 				</li>
 				<li>
-					Last Name
+					Last Name: <%=@user.lname%>
 				</li>
 				<li>
-					Email Address
+					Email Address:  <%=@user.email%>
 				</li>
 				<li>
-					Location
+					Location:  <%=@user.profile.city%>
+				</li>
+				<li>
+					Alma Mater:  <%=@user.profile.school%>
+				</li>
+				<li>
+					Interests:  <%=@user.profile.interests%>
 				</li>
 
 			</ul>
 
 			<button>
-				Create Post
+				<a href="http://localhost:4567/create-post">Create New Post</a>
 			</button>
-<!-- 			<form method="POST" ACTION="/sign-in">
-				<label for="username">Username</lable>
-				<input type="text" name="username">
-				<label for="password">Password</lable>
-				<input type="password" name="password">				
-				<label for="email">Email</lable>
-				<input type="email" name="email">
-				<input type="submit">
-			</form> -->
+
+			<div=Postlist>
+				<%@user.posts.each do |post|%>
+					<%=post.post_title%>
+					<%=post.body%>
+					<%=post.created_at%>
+				<%end%>
+
 		</body>
 
 </html>
