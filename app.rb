@@ -21,9 +21,7 @@ require './models'
 
 
 get '/' do
-	# User.create(fname: "Sos")
 	erb :home
-	# puts fname 
 end
 
 get '/profile' do
@@ -45,8 +43,10 @@ get '/create-profile' do
 end
 
 post '/create-profile' do
-	@newprofile=Profile.create(params[:profile])
-	redirect '/'
+	@newprofile=Profile.new(params[:profile])
+	@newprofile.user_id = current_user.id
+	@newprofile.save
+	redirect '/profile'
 end
 
 get '/create-post' do
@@ -67,7 +67,7 @@ end
 post '/sign-in' do
 	@user=User.where(username: params[:username]).first
 	if @user && @user.password==params[:password]
-		flash[:notice]="You've Successfully Signed In"
+		flash[:notice]="You've Successfully Signed In!"
 		session[:user_id] = @user.id
 		redirect "/profile"
 	else
@@ -78,18 +78,3 @@ post '/sign-in' do
 	end
 end
 
-	#This is for once a user has been successfully signed-In
-
-	# def current_user
-	# 	if session[:user_id]
-	# 		@current_user=User.find(session[:user_id])
-	# 	end
-	# end
-
-
-	# @user=User.last
-	# session[:user_id]=@user.id
-
-
-
-#User.create

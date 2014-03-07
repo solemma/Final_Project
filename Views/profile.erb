@@ -9,27 +9,33 @@
 	</head>
 
 		<body>
-			<ul>
+			<h3>
+				<%=@user.username%>'s Profile Page
+			</h3>
+
+			<img src="/icon.jpg" alt="prof icon" />
+
+			<ul div=profiletext>
 				<li>
-					User Name:  <%=@user.username%>
+					<u class=ftitle>User Name:</u>  <b class=ftext><%=@user.username%><b/>
 				</li>
 				<li>
-					First Name:  <%=@user.fname%>
+					<u class=ftitle>First Name:</u>  <b class=ftext><%=@user.fname%></b>
 				</li>
 				<li>
-					Last Name: <%=@user.lname%>
+					<u class=ftitle>Last Name:</u> <b class=ftext><%=@user.lname%></b>
 				</li>
 				<li>
-					Email Address:  <%=@user.email%>
+					<u class=ftitle>Email Address:</u>  <b class=ftext><%=@user.email%></b>
 				</li>
 				<li>
-					Location:  <%=@user.profile.city%>
+					<u class=ftitle>Location:</u> <b class=ftext> <%=@user.profile.city%> </b>
 				</li>
 				<li>
-					Alma Mater:  <%=@user.profile.school%>
+					<u class=ftitle>Alma Mater:</u>  <b class=ftext><%=@user.profile.school%></b>
 				</li>
 				<li>
-					Interests:  <%=@user.profile.interests%>
+					<u class=ftitle>Interests:</u>  <b class=ftext><%=@user.profile.interests%></b>
 				</li>
 
 			</ul>
@@ -37,12 +43,14 @@
 			<button>
 				<a href="http://localhost:4567/create-post">Create New Post</a>
 			</button>
+		</br>
 
 			<div=Postlist>
 				<%@user.posts.each do |post|%>
-					<%=post.post_title%>
+					<u class=ftitle> <%=post.post_title + ":      "%></u>
 					<%=post.body%>
 					<%=post.created_at%>
+				</br>
 				<%end%>
 
 		</body>
