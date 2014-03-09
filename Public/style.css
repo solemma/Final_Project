@@ -74,7 +74,6 @@ button{
 	font-family: "impact";
 	font-style: bold;
 	text-decoration: none;
-	float: center;
 }
 
 textarea{
@@ -90,3 +89,7 @@ button a:hover{
 }
 
 
+.logout{
+	display: inline-block;
+	float: right;
+}
