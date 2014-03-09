@@ -54,20 +54,19 @@ end
 
 post '/sign-up' do
 	@newuser=User.create(params[:user])
-	session[:user_id] = @newuser.id
+	@newuser=current_user
 	redirect '/create-profile'
 end
 
 get '/create-profile' do
-	erb :create_profile
 	@newuser=current_user
+	erb :create_profile
 end
 
 post '/create-profile' do
-	@newprofile=Profile.new(params[:profile])
-	@newprofile.user_id = session [:user_id]
-	@newprofile.save
-	redirect '/'
+	@newprofile=Profile.create(params[:profile])
+	@newprofile.user_id=current_user.id
+	redirect '/profile'
 end
 
 get '/create-post' do
@@ -81,9 +80,7 @@ post '/create-post' do
 	redirect '/profile'
 end
 
-get '/sign-out' do
-	session[:user_id]=nil
-end
+
 
 get '/logout' do
 	session[:user_id] = nil

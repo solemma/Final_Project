@@ -4,7 +4,9 @@ body{
 	font-style: bold;
 	color: white;
 	background-color: DeepSkyBlue;
-
+	border-color: white;
+	border: 25px;
+	padding: 15px;
 }
 
 h2{
