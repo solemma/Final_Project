@@ -8,7 +8,6 @@ use Rack::Flash, :sweep=>true
 configure (:development) {set :database, "sqlite:///blog.sqlite3"}
 set :sessions, true
 
-set :database, "sqlite3:///new_project.sqlite3"
 
 require './models'
 
