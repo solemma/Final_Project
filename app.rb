@@ -53,7 +53,7 @@ end
 
 post '/sign-up' do
 	@newuser=User.create(params[:user])
-	@newuser=current_user
+	session[:user_id] = @newuser.id
 	redirect '/create-profile'
 end
 
@@ -63,8 +63,10 @@ get '/create-profile' do
 end
 
 post '/create-profile' do
-	@newprofile=Profile.create(params[:profile])
+	@newprofile=Profile.new(params[:profile])
 	@newprofile.user_id=current_user.id
+	@newprofile.save
+	@newuser=current_user
 	redirect '/profile'
 end
 
